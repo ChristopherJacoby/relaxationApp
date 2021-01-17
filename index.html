@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Meditation App</title>
+</head>
+
+<body>
+    <div>
+        <div class="time-select">
+            <input type="button" value="5 Minutes" id="btn5" onclick="fiveMin()">
+            <input type="button" value="10 Minutes" id="btn10" onclick="tenMin()">
+            <input type="button" value="15 Minutes" id="btn15" onclick="fifteenMin()">
+        </div>
+        <div class="play">
+            <input type="button" value="Play" onclick="clickPlay()">
+            <p id="timer"></p>
+        </div>
+        <div class="sound-select">
+            <input type="button" value="Beach">
+            <input type="button" value="Rain">
+            <input type="button" value="Stream">
+            <input type="button" value="Fire">
+            <input type="button" value="Music">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
