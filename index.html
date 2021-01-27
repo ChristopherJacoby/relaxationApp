@@ -5,28 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Meditation App</title>
 </head>
 
 <body>
-    <div>
-        <div class="time-select">
-            <input type="button" value="5 Minutes" id="btn5" onclick="fiveMin()">
-            <input type="button" value="10 Minutes" id="btn10" onclick="tenMin()">
-            <input type="button" value="15 Minutes" id="btn15" onclick="fifteenMin()">
+    <video src="./bg.mov" autoplay muted loop id="bgVid">
+    </video>
+    <div class="row app">
+        <div class="time-select col-4">
+            <button class="timeBtn" onclick="fiveMin()">5 Minutes</button>
+            <button class="timeBtn" onclick="tenMin()">10 Minutes</button>
+            <button class="timeBtn" onclick="fifteenMin()">15 Minutes</button>
         </div>
-        <div class="play">
-            <input type="button" value="Play" onclick="clickPlay()">
-            <p id="timer"></p>
+        <div class="play col-4">
+            <button class="timeBtn playBtn" onclick="clickPlay()"><img class="playImg" src="./play.svg"
+                    alt="Play"></button>
+            <!-- <input type="button" value="Play" class="timeBtn playBtn" onclick="clickPlay()"> -->
+            <h1 class="timer" id="timer">00:00</h1>
+            <!-- <input type="button" value="Pause" onclick="clickPause()"> -->
         </div>
-        <div class="sound-select">
-            <input type="button" value="Beach">
-            <input type="button" value="Rain">
-            <input type="button" value="Stream">
-            <input type="button" value="Fire">
-            <input type="button" value="Music">
+        <div class="sound-select col-4">
+            <input type="button" value="Beach" class="timeBtn" onclick="beachSound()">
+            <input type="button" value="Rain" class="timeBtn" onclick="rainSound()">
+            <input type="button" value="Stream" class="timeBtn" onclick="streamSound()">
+            <input type="button" value="Fire" class="timeBtn" onclick="fireSound()">
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 
